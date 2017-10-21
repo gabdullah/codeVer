@@ -30,18 +30,29 @@ export default {
   },
 
   methods: {
-    split: function(code) {
+    splitter: function(code) {
       console.log('split called');
       var lines = code.split('\n');
-
+      //console.log(lines[0]);
 
       return lines
     },
 
     search: function() {
+      /*var GitHubApi = require("node-github");
+      var github = new GitHubApi({version: "3.0.0"});*/
+
       console.log('search called');
       var code = document.getElementById('textbox').value;
-      var lines = this.split(code);
+      var lines = this.splitter(this.code);
+      var counter = 0;
+      //console.log(lines.length);
+
+      while (counter < lines.length){
+        console.log("text: " + lines[counter]);
+        counter++;
+      }
+      //console.log(lines[0]);
     } 
   }
 
