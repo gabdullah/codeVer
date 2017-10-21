@@ -12,3 +12,24 @@
   <button @click="example()">Add sample code(for testing)</button>
 </div>
 </template>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    split: function() {
+      
+    }
+
+    search: function() {
+
+    }
+  }
+
+}
+</script>
