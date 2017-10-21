@@ -1,6 +1,7 @@
 <template>
   <div id="heading">
     <router-link to="/" class="routerLink">
+      <img src="../assets/codeVerLogo.png"/>
       <h1>codeVer</h1>
       <h2>Your premium code verification software.</h2>
     </router-link>
@@ -19,6 +20,13 @@
   background: #b1e5f2;
   color: black;
   position: relative;
+}
+img{
+  position: absolute;
+  right:0px;
+  padding: 20px;
+  height: 256px;
+  width: 256px;
 }
 h1{
   color: #a6a6a8;
@@ -43,7 +51,7 @@ h2{
   font-style: italic;
   margin: 0px;
   padding-bottom: 25px;
-    transition-duration: 3s;
+    transition-duration: 2s;
 }
   h2:hover{
     color: #272635;
