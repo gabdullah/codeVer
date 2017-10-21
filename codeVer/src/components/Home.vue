@@ -2,7 +2,7 @@
 <div id = "container">
     <codeVerHeader></codeVerHeader>
 
-<p>Enter the sample code below.</p>
+<p style="color:#EBEBEB;">Enter the sample code below.</p>
 
 <textarea id="codeSample" type="text" v-model="code" placeholder="Sample code here">
 </textarea>
@@ -13,7 +13,26 @@
 </div>
 </template>
 
-
+<style>
+  #container{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    flex-flow: column;
+    background: #2f4f4f;
+  }
+  textarea{
+    height: 300px;
+    width: 600px;
+    color: #F45B69;
+  }
+</style>
 
 <script>
 import codeVerHeader from './codeVerHeader.vue'
