@@ -7,7 +7,7 @@
 <textarea id="codeSample" type="text" v-model="code" placeholder="Sample code here">
 </textarea>
 <br>
-  <button @click="search()">Search</button>
+  <button @click="search()" id="textbox">Search</button>
   <br><br>
   <button @click="example()">Add sample code(for testing)</button>
 </div>
@@ -30,13 +30,15 @@ export default {
   },
 
   methods: {
-    /* split: function() {
+    split: function(code) {
+      lines = code.split('\n')
 
-    }
+      return lines
+    },
 
     search: function() {
 
-    } */
+    } 
   }
 
 }
