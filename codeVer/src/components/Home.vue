@@ -31,13 +31,17 @@ export default {
 
   methods: {
     split: function(code) {
-      lines = code.split('\n')
+      console.log('split called');
+      var lines = code.split('\n');
+
 
       return lines
     },
 
     search: function() {
-
+      console.log('search called');
+      var code = document.getElementById('textbox').value;
+      var lines = this.split(code);
     } 
   }
 
