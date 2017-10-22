@@ -48,17 +48,17 @@ img{
 .block{
   height:100%;
   width:100%;
-  z-index:0;
-  left:100%;
+  z-index:-1;
+  left:0%;
   animation-name: slide;
   animation-duration: 5s;
 }
 @keyframes slide {
-  from{left:0%;}
-  to{left: 100%;}
+  from{left:0%; z-index:0;}
+  to{left: 100%;z-index:0;}
 }
 @keyframes after:slide{
-
+  z-index: -1;
 }
 .logo{
   right:0px;
@@ -68,6 +68,7 @@ img{
   z-index: 2;
 }
 h1{
+  font-family: Georgia, serif;
   color: #a6a6a8;
   position: absolute;
   font-size: 90px;

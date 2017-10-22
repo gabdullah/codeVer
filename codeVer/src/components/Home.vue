@@ -31,8 +31,18 @@
     flex-flow: column;
     background: #2f4f4f;
   }
+  button{
+    background-color: #a6a6a8;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
   textarea{
-    height: 300px;
+    height: 225px;
     width: 1000px;
     color: #F45B69;
   }
