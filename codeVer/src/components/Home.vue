@@ -35,27 +35,102 @@
 </style>
 
 <script>
-import codeVerHeader from './codeVerHeader.vue'
+import codeVerHeader from './codeVerHeader.vue';
+import axios from 'axios';
+import Github from 'github-api';
+//import FormData from 'form-data';
 export default {
   name: 'HelloWorld',
 
-  data () {
+ data () {
     return {
-      code: ''
+      code: '',
+      //posts: [],
+      //errors: []
     }
   },
   components:{
     codeVerHeader
   },
 
-  methods: {
-    /* split: function() {
+ methods: {
+    splitter: function(code) {
+      console.log('split called');
+      var lines = code.split('\n');
+      //console.log(lines[0]);
 
-    }*/
+     return lines
+    },
 
-    search: function() {
-        this.$router.push('/Final');
+   search: function() {
+      /*const concat = require("concat-stream");
+      const FormData = require('form-data');
+      const fd = new FormData();
+      const fs = require('fs');
+
+     fd.append("-u", fs.createReadStream("gabdullah"));
+      fd.pipe(concat({encoding: 'buffer'}, data => {
+        axios.post("https://api.github.com", data)
+      }));*/
+
+     //var curl = require('curlrequest');
+      //var github = require('octonode');
+
+
+
+
+
+
+     console.log('search called');
+      var code = document.getElementById('textbox').value;
+      var lines = this.splitter(this.code);
+      var counter = 0;
+
+     //while (counter < lines.length){
+      //  console.log("text: " + lines[counter]);
+      //  counter++;
+      //}
+
+    /* return axios.post('https://api.github.com/user', {
+        header: 'Accept: application/vnd.github.v3+json',
+        username: 'gabdullah'
+      })*/
+
+     var gh = new Github({
+        username: '',
+        password: ''
+      });
+
+     var me = gh.getUser();
+
+     var code = "for (int i = 0; i < 10; i++)";
+    /*console.log(gh.search({
+      select repo,
+      where code = code
+    }));*/
+
+     var posts;
+      var errors = [];
+      return axios.get('https://api.github.com/users/gabdullah/repos')
+      .then(response => {
+        //var data = response.data
+        //var meta = response.meta;
+        console.log(response.data)
+        //console.log(response.meta);
+      })
+      .catch(e => {
+        errors.push(e)
+        console.log(errors.pop())
+      })
+
+     //while (counter < posts.length){
+      //  counsole.log(counter + posts[counter]);
+      //  counter++;
+      //}
+
+     //this.$router.push('/final');
     }
   }
+
 }
 </script>
