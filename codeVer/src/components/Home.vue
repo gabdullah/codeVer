@@ -7,7 +7,7 @@
 <textarea id="codeSample" type="text" v-model="code" placeholder="Sample code here">
 </textarea>
 <br>
-  <button @click="search()">Search</button>
+  <button @click="search()" id='textbox'>Search</button>
   <br><br>
   <button @click="example()">Add sample code(for testing)</button>
 </div>
@@ -97,17 +97,14 @@ export default {
       })*/
 
      var gh = new Github({
-        username: '',
-        password: ''
+        username: 'collinw9898',
+        password: 'Cw122198!'
       });
 
      var me = gh.getUser();
 
      var code = "for (int i = 0; i < 10; i++)";
-    /*console.log(gh.search({
-      select repo,
-      where code = code
-    }));*/
+    console.log(gh.search({q: code}));
 
      var posts;
       var errors = [];
@@ -115,12 +112,12 @@ export default {
       .then(response => {
         //var data = response.data
         //var meta = response.meta;
-        console.log(response.data)
+        //console.log(response.data)
         //console.log(response.meta);
       })
       .catch(e => {
         errors.push(e)
-        console.log(errors.pop())
+        //console.log(errors.pop())
       })
 
      //while (counter < posts.length){
