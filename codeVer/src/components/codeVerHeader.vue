@@ -56,14 +56,14 @@ img{
 }
 .logo{
   right:0px;
-  padding: 20px;
+  padding: 30px;
   height: 256px;
   width: 256px;
   z-index: 2;
 }
 h1{
   font-family: Georgia, serif;
-  color: #a6a6a8;
+  color: #708090;
   position: absolute;
   font-size: 90px;
   bottom: 50px;
@@ -78,7 +78,7 @@ h1{
   }
 h2{
   position: absolute;
-  color: #52489C;
+  color: #a6a6a8;
   bottom: 0px;
   left: 5px;
   font-size: 50px;

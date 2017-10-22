@@ -2,10 +2,11 @@
   <div id = "container">
       <codeVerHeader></codeVerHeader>
 
-      <h3>Possible Plagerised Projects</h3>
+      <h3>Projects of Interest</h3>
 
       <table>
-        <tr><td class="percent">% Plagiarized</td><td class="project">Project</td></tr><br>
+        <tr><td class="percent">% Similar</td> <td class="project">Project</td></tr>
+        <tr><td colspan="2"><hr></hr></td></tr>
         <tr><td class="percent">% Placeholder</td><td class="project">Project Placeholder</td></tr><br>
         <tr><td class="percent">% Placeholder</td><td class="project">Project Placeholder</td></tr><br>
         <tr><td class="percent">% Placeholder</td><td class="project">Project Placeholder</td></tr><br>
