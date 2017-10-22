@@ -39,12 +39,29 @@ def percentage(inputStrings, dirtyStrings):
 
 testDirtyStrings = [1, 2, 3, 4, 5] 
 
+#testing = this.$root.dirtyStrings[0]
+#	Should only get the top 5 repos for every user input string
+#	Can only grab repos when whitespace is still there
+counter = 0
+it = 0
 testInputStrings = ["#for repo in g.search_code('for repo in g.search_code(\'tetris\', language=\'python\'):', language='python'):", "test", "test2", "test3", "test4"]
+for gitStr in g.search_code(testInputStrings[counter]):
+	print gitStr.html_url
+	it = it + 1
+	if it == 5:
+		it = 0
+		counter = counter + 1
+		if counter == len(testInputStrings):
+			break
+#	if counter == 5:
+#		break
+
 for i in range(len(testInputStrings)):
 	testInputStrings[i] = removeWhiteSpace(testInputStrings[i])
 
 percents = percentage(testInputStrings, testDirtyStrings)
 
+#print 'test'
 
 
 #g.load(t)

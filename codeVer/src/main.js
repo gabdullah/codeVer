@@ -9,6 +9,13 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  data(){
+  	return{
+  		inputStrings: [],
+  		dirtyStrings: [0, 0, 0, 0, 0],
+  		percentage: [1.0, 1.0, 1.0, 1.0, 1.0]
+  	}
+  },
   router,
   template: '<App/>',
   components: { App }

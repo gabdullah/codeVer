@@ -11,7 +11,7 @@
 <textarea id="codeSample" type="text" v-model="code" placeholder="Sample code here">
 </textarea>
 <br>
-  <button @click="search()">Search</button>
+  <button @click="search()" id="textbox">Search</button>
   <br><br>
   <button @click="example()">Add sample code(for testing)</button>
 </div>
@@ -63,13 +63,11 @@ export default {
   },
 
   methods: {
-     /*splitter: function(code) {
-       console.log('split called');
-       var lines = code.split('\n');
-       //console.log(lines[0]);
-
+     splitter: function(code) {
+      console.log('split called');
+      var lines = code.split('\n');
       return lines
-    },*/
+    },
 
     search: function() {
        /*const concat = require("concat-stream");
@@ -90,9 +88,11 @@ export default {
 
 
 
-      /*console.log('search called');
+      console.log('search called');
        var code = document.getElementById('textbox').value;
-       var lines = this.splitter(this.code);
+       this.$root.inputStrings = this.splitter(this.code);
+       //for (var i = 0; i < 15; i++)
+          //console.log(this.$root.inputStrings.pop());
        var counter = 0;
 
       //while (counter < lines.length){
