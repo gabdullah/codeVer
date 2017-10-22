@@ -1,7 +1,13 @@
 <template>
   <div id="heading">
     <router-link to="/" class="routerLink">
-      <img src="../assets/codeVerLogo.png"/>
+      <img src="../assets/sineWave.png" class="sine"/>
+      <img src="../assets/flipSineWave.png" class="cosine"/>
+      <img src="../assets/block.png" class="block"/>
+      <img src="../assets/codeVerLogo.png" class="logo"/>
+<!--      <div class="sine">
+        <span class="sine_span sine_span_first"></span><span class="sine_span sine_span_second"></span>
+      </div>-->
       <h1>codeVer</h1>
       <h2>Your premium code verification software.</h2>
     </router-link>
@@ -23,10 +29,43 @@
 }
 img{
   position: absolute;
+}
+.sine{
+  filter: opacity(35%);
+  height:100%;
+  width:100%;
+  z-index: 0;
+  left:0px;
+}
+.cosine{
+  filter: opacity(35%);
+  top: 5px;
+  height:100%;
+  width:100%;
+  z-index: 0;
+  left: 0%;
+}
+.block{
+  height:100%;
+  width:100%;
+  z-index:0;
+  left:100%;
+  animation-name: slide;
+  animation-duration: 5s;
+}
+@keyframes slide {
+  from{left:0%;}
+  to{left: 100%;}
+}
+@keyframes after:slide{
+
+}
+.logo{
   right:0px;
   padding: 20px;
   height: 256px;
   width: 256px;
+  z-index: 2;
 }
 h1{
   color: #a6a6a8;

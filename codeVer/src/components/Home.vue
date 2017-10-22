@@ -1,8 +1,12 @@
 <template>
+<!--<head>
+  <title>codeVer - Code Authenticator</title>
+</head>-->
+
 <div id = "container">
     <codeVerHeader></codeVerHeader>
 
-<p style="color:#EBEBEB;">Enter the sample code below.</p>
+<p style="position:relative;color:#EBEBEB; align:center;">Enter the sample code below.</p>
 
 <textarea id="codeSample" type="text" v-model="code" placeholder="Sample code here">
 </textarea>
