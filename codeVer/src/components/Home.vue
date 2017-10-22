@@ -63,9 +63,9 @@ export default {
   },
 
   methods: {
-    /* split: function() {
-
-    }*/
+    example: function() {
+      this.code = "//This is a sample of our code\n<template>\n        <div id=\"heading\">\n          <router-link to=\"/\" class=\"routerLink\">\n            <img src=\"../assets/sineWave.png\" class=\"sine\"/>\n            <img src=\"../assets/flipSineWave.png\" class=\"cosine\"/>\n            <img src=\"../assets/block.png\" class=\"block\"/>\n            <img src=\"../assets/codeVerLogo.png\" class=\"logo\"/>\n            <h1>codeVer</h1>\n            <h2>Your premium code verification software.</h2>\n          </router-link>\n        </div>\n      </template>"
+    },
 
     search: function() {
         this.$router.push('/Final');

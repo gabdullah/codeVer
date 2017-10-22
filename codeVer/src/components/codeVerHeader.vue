@@ -5,9 +5,6 @@
       <img src="../assets/flipSineWave.png" class="cosine"/>
       <img src="../assets/block.png" class="block"/>
       <img src="../assets/codeVerLogo.png" class="logo"/>
-<!--      <div class="sine">
-        <span class="sine_span sine_span_first"></span><span class="sine_span sine_span_second"></span>
-      </div>-->
       <h1>codeVer</h1>
       <h2>Your premium code verification software.</h2>
     </router-link>
@@ -22,7 +19,7 @@
   width: 100%;
   margin-top: 0px;
   padding:0px;
-  height: 200px;
+  height: 175px;
   background: #b1e5f2;
   color: black;
   position: relative;
@@ -56,9 +53,6 @@ img{
 @keyframes slide {
   from{left:0%; z-index:0;}
   to{left: 100%;z-index:0;}
-}
-@keyframes after:slide{
-  z-index: -1;
 }
 .logo{
   right:0px;
