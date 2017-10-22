@@ -71,72 +71,73 @@ export default {
      return lines
     },
 
-   search: function() {
-      /*const concat = require("concat-stream");
-      const FormData = require('form-data');
-      const fd = new FormData();
-      const fs = require('fs');
+    search: function() {
+       /*const concat = require("concat-stream");
+       const FormData = require('form-data');
+       const fd = new FormData();
+       const fs = require('fs');
 
-     fd.append("-u", fs.createReadStream("gabdullah"));
-      fd.pipe(concat({encoding: 'buffer'}, data => {
-        axios.post("https://api.github.com", data)
-      }));*/
+      fd.append("-u", fs.createReadStream("gabdullah"));
+       fd.pipe(concat({encoding: 'buffer'}, data => {
+         axios.post("https://api.github.com", data)
+       }));*/
 
-     //var curl = require('curlrequest');
-      //var github = require('octonode');
-
-
+      //var curl = require('curlrequest');
+       //var github = require('octonode');
 
 
 
 
-     console.log('search called');
-      var code = document.getElementById('textbox').value;
-      var lines = this.splitter(this.code);
-      var counter = 0;
 
-     //while (counter < lines.length){
-      //  console.log("text: " + lines[counter]);
-      //  counter++;
-      //}
 
-    /* return axios.post('https://api.github.com/user', {
-        header: 'Accept: application/vnd.github.v3+json',
-        username: 'gabdullah'
-      })*/
+      console.log('search called');
+       var code = document.getElementById('textbox').value;
+       var lines = this.splitter(this.code);
+       var counter = 0;
 
-     var gh = new Github({
-        username: 'collinw9898',
-        password: 'Cw122198!'
-      });
+      //while (counter < lines.length){
+       //  console.log("text: " + lines[counter]);
+       //  counter++;
+       //}
 
-     var me = gh.getUser();
+     /* return axios.post('https://api.github.com/user', {
+         header: 'Accept: application/vnd.github.v3+json',
+         username: 'gabdullah'
+       })*/
 
-     var code = "for (int i = 0; i < 10; i++)";
-    console.log(gh.search({q: code}));
+      var gh = new Github({
+         username: 'collinw9898',
+         password: 'Cw122198!'
+       });
 
-     var posts;
-      var errors = [];
-      return axios.get('https://api.github.com/users/gabdullah/repos')
-      .then(response => {
-        //var data = response.data
-        //var meta = response.meta;
-        //console.log(response.data)
-        //console.log(response.meta);
-      })
-      .catch(e => {
-        errors.push(e)
-        //console.log(errors.pop())
-      })
+      var me = gh.getUser();
 
-     //while (counter < posts.length){
-      //  counsole.log(counter + posts[counter]);
-      //  counter++;
-      //}
+      var code = "for (int i = 0; i < 10; i++)";
+     console.log(gh.search({q: code}));
 
-     //this.$router.push('/final');
+      var posts;
+       var errors = [];
+       return axios.get('https://api.github.com/users/gabdullah/repos')
+       .then(response => {
+         //var data = response.data
+         //var meta = response.meta;
+         //console.log(response.data)
+         //console.log(response.meta);
+       })
+       .catch(e => {
+         errors.push(e)
+         //console.log(errors.pop())
+       })
+
+      //while (counter < posts.length){
+       //  counsole.log(counter + posts[counter]);
+       //  counter++;
+       //}
+
+      //this.$router.push('/final');
+     }
    }
- }
+
 
 }
 </script>
