@@ -14,6 +14,7 @@
   <button @click="search()" id="textbox">Search</button>
   <br><br>
   <button @click="example()">Add sample code(for testing)</button>
+  <img src="../assets/kentLogo.png" class="kent"/>
 </div>
 </template>
 
@@ -45,6 +46,13 @@
     height: 225px;
     width: 1000px;
     color: #F45B69;
+  }
+  .kent{
+    height: 15%;
+    width: 15%;
+    right:0%;
+    bottom:0%;
+    padding: 10px;
   }
 </style>
 
