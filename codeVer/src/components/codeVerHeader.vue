@@ -44,15 +44,15 @@ img{
 }
 .block{
   height:100%;
-  width:100%;
+  width:0%;
   z-index:-1;
-  left:0%;
+  right:0%;
   animation-name: slide;
   animation-duration: 5s;
 }
 @keyframes slide {
-  from{left:0%; z-index:0;}
-  to{left: 100%;z-index:0;}
+  from{width:100%; z-index:0;}
+  to{width:0%;z-index:0;}
 }
 .logo{
   right:0px;
